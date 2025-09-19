@@ -231,7 +231,7 @@ const ImageProcessor: React.FC = () => {
         try {
             const imageBase64 = canvas.toDataURL(originalImage.type);
             
-            // This is the updated endpoint for Netlify Functions
+            // Use the Netlify serverless function.
             const response = await fetch('/.netlify/functions/generate', {
                 method: 'POST',
                 headers: {
